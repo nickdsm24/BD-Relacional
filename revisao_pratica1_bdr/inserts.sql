@@ -1,4 +1,4 @@
-/*
+
 -- E3
 INSERT INTO tbLoja
 VALUES
@@ -19,9 +19,9 @@ VALUES
 (1, 'Shadow of the Colossus', '2005-10-18', 'Ação, Aventura, Quebra-cabeça'),
 (2, 'Assassins Creed IV: Black Flag', '2013-10-29', 'Ação, Aventura, Stealth, Naval'),
 (3, 'A Memoir Blue', '2022-03-24', 'Aventura-narrativa, Poema-interativo, Point-and-Click');
-*/
 
-/*
+
+/
 -- E6
 INSERT INTO tbBuy
 VALUES
@@ -30,7 +30,7 @@ VALUES
 (3, '2023-01-02', 2, 3);
 */
 
-/*
+
 -- E7
 INSERT INTO tbBuy_Game
 VALUES
@@ -43,4 +43,3 @@ VALUES
 -- idCompra 3
 (3, 2, 1),
 (3, 3, 1);
-*/
