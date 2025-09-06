@@ -1,0 +1,37 @@
+CREATE DATABASE rede_games;
+USE rede_games;
+
+
+CREATE TABLE IF NOT EXISTS tbLoja(
+idLoja INT PRIMARY KEY NOT NULL,
+	nomeLoja VARCHAR(150) NOT NULL,
+	cidade VARCHAR(200) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS tbGame(
+idGame INT PRIMARY KEY NOT NULL,
+	nomeGame VARCHAR(150) NOT NULL,
+	ano DATE,
+	genero VARCHAR(120)
+);
+
+CREATE TABLE IF NOT EXISTS tbCliente(
+idCliente INT PRIMARY KEY NOT NULL,
+	nomeCliente VARCHAR(150) NOT NULL,
+	email VARCHAR(200) UNIQUE NOT NULL,
+	cidadeCliente VARCHAR(200)
+);
+
+CREATE TABLE IF NOT EXISTS tbBuy(
+idBuy INT PRIMARY KEY NOT NULL,
+	dataCompra DATE NOT NULL,
+	id_Cliente INT REFERENCES tbCliente(idCliente) ON DELETE CASCADE,
+	id_Loja INT REFERENCES tbLoja(idLoja) ON DELETE CASCADE
+);
+
+-- Tabela Associativa
+CREATE TABLE IF NOT EXISTS tbBuy_Game(
+	idBG INT REFERENCES tbBuy(idBuy) NOT NULL,
+	id_Game INT REFERENCES tbGame(idgame) NOT NULL,
+	quantidade INT NOT NULL
+);
