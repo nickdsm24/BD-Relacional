@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS tbDados (
   CONSTRAINT fk_dado_satelite FOREIGN KEY (idSatelite) REFERENCES tbSatelite(idSatelite)
 );
 
--- Mensagens
+-- Mensagens (tabel auxiliar, não consta em modelo original)
 CREATE TABLE IF NOT EXISTS tbMensagem (
   idMsg INT PRIMARY KEY,
   textoMsg VARCHAR(300),

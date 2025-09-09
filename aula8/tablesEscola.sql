@@ -1,0 +1,19 @@
+
+CREATE TABLE IF NOT EXISTS tbCurso(
+idCurso INT PRIMARY KEY,
+	nomeCUrso VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS tbAluno(
+idAluno INT PRIMARY KEY,
+	nomeAluno VARCHAR(150) NOT NULL,
+	idadeAluno INT,
+	id_Curso INT REFERENCES tbCurso(idCurso)
+);
+
+CREATE TABLE IF NOT EXISTS tbNota(
+idNota INT PRIMARY KEY,
+	disc VARCHAR(150) NOT NULL,
+	nota FLOAT,
+	id_aluno INT REFERENCES tbAluno(idAluno)
+);
