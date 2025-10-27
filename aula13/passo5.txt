@@ -1,0 +1,5 @@
+Houve uma diferença de 0.036 milissegundos para o EXISTS. Dado que foi com uma quantia de dados pequena,
+não há diferença entre um exemplo e outro. Mas, o otimizador postgreSQL é tão eficiente que ambas as formas são rápidas e eficientes,
+com pouca divergência entre eles.
+Mas, num banco com milhares/milhões de dados, o tipo com EXISTS tende a ganhar do IN, já que um termina a procura no primeiro resultado encontrado,
+enquanto o outro necessita de montar a lista antes.
